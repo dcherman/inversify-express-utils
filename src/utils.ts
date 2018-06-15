@@ -10,7 +10,7 @@ export function getControllersFromContainer(
     if (container.isBound(TYPE.Controller)) {
         return container.getAll<interfaces.Controller>(TYPE.Controller);
     } else if (forceControllers) {
-        throw new Error(NO_CONTROLLERS_FOUND);
+        throw new Error(NO_CONTROLLERS_FOUND + "foo");
     } else {
         return [];
     }
